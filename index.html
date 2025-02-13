@@ -33,7 +33,7 @@
             align-items: center;
             transition: background-color 0.3s ease-in-out;
             width: 100%;
-            max-width: 900px;
+            max-width: 900px; /* Ширина увеличена */
             margin-left: auto;
             margin-right: auto;
         }
@@ -66,7 +66,6 @@
         }
         .download-link {
             display: inline-block;
-            margin-top: 15px;
             padding: 12px 20px;
             background: #0078d4;
             color: white;
@@ -74,6 +73,8 @@
             border-radius: 8px;
             font-size: 14px;
             transition: background 0.3s ease-in-out;
+            margin-left: 20px; /* Синий блок прижат к правому краю */
+            margin-top: 10px;
         }
         .download-link:hover {
             background: #005fa3;
@@ -81,7 +82,7 @@
         .sub-step {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             margin-left: 20px;
             padding: 20px;
             background: #ffffff;
@@ -94,10 +95,6 @@
             font-size: 14px;
             color: #666;
             flex-grow: 1;
-        }
-        .sub-step .download-link {
-            margin-left: 20px;
-            align-self: flex-end; /* Синий блок прижат снизу */
         }
 
         /* Стиль для экрана до ввода пароля */
