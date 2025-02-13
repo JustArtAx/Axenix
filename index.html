@@ -33,7 +33,7 @@
             align-items: center;
             transition: background-color 0.3s ease-in-out;
             width: 100%;
-            max-width: 900px; /* Ширина увеличена */
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -73,7 +73,6 @@
             border-radius: 8px;
             font-size: 14px;
             transition: background 0.3s ease-in-out;
-            margin-left: 20px; /* Синий блок прижат к правому краю */
             margin-top: 10px;
         }
         .download-link:hover {
@@ -81,8 +80,8 @@
         }
         .sub-step {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-end; /* Синий блок прижат справа */
+            align-items: flex-end;
             margin-left: 20px;
             padding: 20px;
             background: #ffffff;
@@ -173,18 +172,12 @@
         
         <div class="sub-step">
             <p>1.1. Запустите установочный файл</p>
-            <div>
-                <p>Откройте загруженный файл и следуйте инструкциям мастера установки.</p>
-                <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
-            </div>
+            <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
         </div>
         
         <div class="sub-step">
             <p>1.2. Завершение установки</p>
-            <div>
-                <p>После завершения установки нажмите "Готово".</p>
-                <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
-            </div>
+            <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
         </div>
     </div>
 
