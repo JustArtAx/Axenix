@@ -3,55 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блокнот</title>
+    <title>Инструкция по скачиванию ПО</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            line-height: 1.6;
+            margin: 20px;
             padding: 20px;
-            background-color: #f4f4f4;
+            max-width: 800px;
+            margin: auto;
         }
-        textarea {
-            width: 100%;
-            height: 400px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            resize: none;
+        h1 {
+            text-align: center;
         }
-        button {
+        .step {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            background: #f4f4f4;
+        }
+        .download-link {
+            display: inline-block;
             margin-top: 10px;
             padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-link:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
-
-    <h1>Блокнот</h1>
-    <textarea id="note" placeholder="Введите ваш текст здесь..."></textarea><br>
-    <button onclick="saveNote()">Сохранить</button>
-    <button onclick="loadNote()">Загрузить</button>
-
-    <script>
-        function saveNote() {
-            const noteContent = document.getElementById('note').value;
-            localStorage.setItem('note', noteContent);
-            alert('Заметка сохранена!');
-        }
-
-        function loadNote() {
-            const savedNote = localStorage.getItem('note');
-            if (savedNote) {
-                document.getElementById('note').value = savedNote;
-                alert('Заметка загружена!');
-            } else {
-                alert('Нет сохраненной заметки.');
-            }
-        }
-    </script>
-
+    <h1>Инструкция по скачиванию и установке ПО</h1>
+    
+    <div class="step">
+        <h2>Шаг 1: Установка Oracle VirtualBox</h2>
+        <p>Для начала установки скачайте и установите Oracle VirtualBox, который позволит вам работать с виртуальными машинами.</p>
+        <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать Oracle VirtualBox</a>
+    </div>
+    
+    <div class="step">
+        <h2>Шаг 2: (Добавьте следующий шаг)</h2>
+        <p>Описание следующего шага...</p>
+    </div>
+    
 </body>
 </html>
