@@ -93,6 +93,7 @@
             align-items: center;
             background: rgba(255, 255, 255, 0.9);
             z-index: 9999;
+            backdrop-filter: blur(10px);
         }
         .password-box {
             background: #ffffff;
@@ -100,16 +101,23 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .blurred {
+            filter: blur(10px);
+            pointer-events: none;
+        }
     </style>
     <script>
         function checkPassword() {
             let password = prompt("Введите пароль для доступа к инструкции:");
             if (password === "jyhrod-dodfa-5") {
+                // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
                 document.querySelector('.password-section').style.display = "none";
+                document.querySelector('body').classList.remove('blurred');
             } else {
-                alert("Неверный пароль. Доступ запрещён.");
-                window.location.href = "about:blank";
+                // Повторный запрос пароля в случае ошибки
+                alert("Неверный пароль. Пожалуйста, попробуйте снова.");
+                checkPassword();  // Повторный вызов для ввода пароля
             }
         }
 
@@ -120,19 +128,21 @@
     </script>
 </head>
 <body onload="checkPassword()">
+    <!-- Парольный экран -->
     <div class="password-section">
         <div class="password-box">
             <h2>Для доступа к инструкции введите пароль:</h2>
         </div>
     </div>
 
+    <!-- Содержание страницы, которое будет скрыто до ввода правильного пароля -->
     <h1>Установка и начало работы с ВРМ Oracle VirtualBox и Basis</h1>
 
-    <div class="step" onclick="toggleStep('step1')">
+    <div class="step blurred" onclick="toggleStep('step1')">
         <h2>01. Установка Oracle VirtualBox</h2>
         <span class="arrow"></span>
     </div>
-    <div id="step1" class="step-content">
+    <div id="step1" class="step-content blurred">
         <p>Для начала установки скачайте и установите Oracle VirtualBox, который позволит вам работать с виртуальными машинами.</p>
         <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать Oracle VirtualBox</a>
         
@@ -151,11 +161,11 @@
         </div>
     </div>
 
-    <div class="step" onclick="toggleStep('step2')">
+    <div class="step blurred" onclick="toggleStep('step2')">
         <h2>02. (Добавьте следующий шаг)</h2>
         <span class="arrow"></span>
     </div>
-    <div id="step2" class="step-content">
+    <div id="step2" class="step-content blurred">
         <p>Описание следующего шага...</p>
     </div>
 </body>
