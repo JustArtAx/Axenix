@@ -16,13 +16,13 @@
         h1 {
             text-align: center;
             padding: 40px 20px;
-            font-size: 24px;
+            font-size: 32px; /* Увеличил размер заголовка */
             color: #333;
             margin: 0;
         }
         .step {
             margin: 20px 0;
-            padding: 20px;
+            padding: 30px; /* Увеличил поля с шагами */
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -38,11 +38,11 @@
         }
         .step h2 {
             margin: 0;
-            font-size: 18px;
+            font-size: 20px;
             color: #333;
         }
         .arrow {
-            border: solid 2px #0078d4;
+            border: solid 2px #adb5bd; /* Сделал стрелочки серыми */
             border-width: 0 2px 2px 0;
             display: inline-block;
             padding: 5px;
@@ -54,7 +54,7 @@
         }
         .step-content {
             display: none;
-            padding: 20px;
+            padding: 30px; /* Сделал поля с шагами больше */
             background: #f9fafb;
             border-radius: 12px;
             margin-top: 10px;
@@ -79,7 +79,7 @@
         }
         .sub-step {
             margin-left: 20px;
-            padding: 15px;
+            padding: 20px;
             background: #ffffff;
             margin-top: 15px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -90,32 +90,6 @@
             font-size: 14px;
             color: #666;
         }
-        .password-section {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            z-index: 9999;
-            backdrop-filter: blur(10px);
-        }
-        .password-box {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-        }
-        .blurred {
-            filter: blur(10px);
-            pointer-events: none;
-        }
     </style>
     <script>
         function checkPassword() {
@@ -123,7 +97,6 @@
             if (password === "jyhrod-dodfa-5") {
                 // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
-                document.querySelector('.password-section').style.display = "none";
                 // Убираем размытие с контента
                 document.querySelector('body').classList.remove('blurred');
                 document.querySelectorAll('.step, .step-content').forEach(el => {
@@ -143,13 +116,6 @@
     </script>
 </head>
 <body onload="checkPassword()">
-    <!-- Скрытый парольный экран -->
-    <div class="password-section" id="passwordSection">
-        <div class="password-box">
-            <h2>Для доступа к инструкции введите пароль:</h2>
-        </div>
-    </div>
-
     <!-- Содержание страницы, которое будет скрыто до ввода правильного пароля -->
     <h1>Установка и начало работы с ВРМ Oracle VirtualBox и Basis</h1>
 
