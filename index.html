@@ -82,25 +82,6 @@
         .sub-step p {
             margin: 0;
         }
-        .password-section {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            z-index: 9999;
-            backdrop-filter: blur(10px);
-        }
-        .password-box {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
         .blurred {
             filter: blur(10px);
             pointer-events: none;
@@ -112,7 +93,6 @@
             if (password === "jyhrod-dodfa-5") {
                 // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
-                document.querySelector('.password-section').style.display = "none";
                 // Убираем размытие с контента
                 document.querySelector('body').classList.remove('blurred');
                 document.querySelectorAll('.step, .step-content').forEach(el => {
@@ -132,13 +112,6 @@
     </script>
 </head>
 <body onload="checkPassword()">
-    <!-- Парольный экран -->
-    <div class="password-section">
-        <div class="password-box">
-            <h2>Для доступа к инструкции введите пароль:</h2>
-        </div>
-    </div>
-
     <!-- Содержание страницы, которое будет скрыто до ввода правильного пароля -->
     <h1>Установка и начало работы с ВРМ Oracle VirtualBox и Basis</h1>
 
