@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция по скачиванию ПО</title>
+    <title>Установка и начало работы с ВРМ Oracle VirtualBox и Basis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,15 +12,22 @@
             padding: 20px;
             max-width: 800px;
             margin: auto;
+            display: none;
         }
         h1 {
             text-align: center;
         }
         .step {
-            margin-bottom: 20px;
-            padding: 15px;
+            margin-bottom: 10px;
+            padding: 10px;
             border-left: 5px solid #007bff;
             background: #f4f4f4;
+            cursor: pointer;
+        }
+        .step-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
         }
         .download-link {
             display: inline-block;
@@ -34,21 +41,57 @@
         .download-link:hover {
             background: #0056b3;
         }
+        .sub-step {
+            margin-left: 20px;
+            padding: 10px;
+            border-left: 3px solid #28a745;
+            background: #d4edda;
+        }
     </style>
+    <script>
+        function checkPassword() {
+            let password = prompt("Введите пароль для доступа к инструкции:");
+            if (password === "jyhrod-dodfa-5") {
+                document.body.style.display = "block";
+            } else {
+                alert("Неверный пароль. Доступ запрещён.");
+                window.location.href = "about:blank";
+            }
+        }
+        function toggleStep(id) {
+            let content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </head>
-<body>
-    <h1>Инструкция по скачиванию и установке ПО</h1>
+<body onload="checkPassword()">
+    <h1>Установка и начало работы с ВРМ Oracle VirtualBox и Basis</h1>
     
-    <div class="step">
+    <div class="step" onclick="toggleStep('step1')">
         <h2>Шаг 1: Установка Oracle VirtualBox</h2>
+    </div>
+    <div id="step1" class="step-content">
         <p>Для начала установки скачайте и установите Oracle VirtualBox, который позволит вам работать с виртуальными машинами.</p>
-        <a class="download-link" href="https://drive.google.com/uc?export=download&id=1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt" target="_blank">Скачать Oracle VirtualBox</a>
+        <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать Oracle VirtualBox</a>
+        
+        <div class="sub-step">
+            <h3>Дополнительный шаг 1.1: Запустите установочный файл</h3>
+            <p>Откройте загруженный файл и следуйте инструкциям мастера установки.</p>
+            <img src="install_step1.png" alt="Запуск установочного файла">
+        </div>
+        
+        <div class="sub-step">
+            <h3>Дополнительный шаг 1.2: Завершение установки</h3>
+            <p>После завершения установки нажмите "Готово".</p>
+            <img src="install_step2.png" alt="Завершение установки">
+        </div>
     </div>
     
-    <div class="step">
+    <div class="step" onclick="toggleStep('step2')">
         <h2>Шаг 2: (Добавьте следующий шаг)</h2>
+    </div>
+    <div id="step2" class="step-content">
         <p>Описание следующего шага...</p>
     </div>
-    
 </body>
 </html>
