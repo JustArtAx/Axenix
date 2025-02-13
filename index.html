@@ -85,19 +85,19 @@
             margin-top: 15px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
-            display: flex; 
+            display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end; /* Прижимаем плашку к нижнему краю */
         }
         .sub-step p {
             margin: 0;
             font-size: 14px;
             color: #666;
-            flex-grow: 1; /* Текст будет выше */
+            flex-grow: 1; /* Текст будет слева */
         }
         .sub-step .download-link {
             margin-left: 20px;
-            order: 2; /* Кнопка справа */
+            order: 2; /* Плашка справа */
         }
 
         /* Стиль для экрана до ввода пароля */
