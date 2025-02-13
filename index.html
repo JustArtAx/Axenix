@@ -33,13 +33,13 @@
             align-items: center;
             transition: background-color 0.3s ease-in-out;
             width: 100%;
-            max-width: 900px; /* Ширина увеличена */
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
         .step h2 {
             margin: 0;
-            font-size: 26px; /* Увеличил шрифт шагов */
+            font-size: 26px;
             color: #333;
         }
         .arrow {
@@ -60,7 +60,7 @@
             border-radius: 12px;
             margin-top: 10px;
             width: 100%;
-            max-width: 900px; /* Ширина увеличена */
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -79,25 +79,25 @@
             background: #005fa3;
         }
         .sub-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-left: 20px;
             padding: 20px;
             background: #ffffff;
             margin-top: 15px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end; /* Прижимаем плашку к нижнему краю */
         }
         .sub-step p {
             margin: 0;
             font-size: 14px;
             color: #666;
-            flex-grow: 1; /* Текст будет слева */
+            flex-grow: 1;
         }
         .sub-step .download-link {
             margin-left: 20px;
-            order: 2; /* Плашка справа */
+            align-self: flex-end; /* Синий блок прижат снизу */
         }
 
         /* Стиль для экрана до ввода пароля */
@@ -110,7 +110,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95); /* Почти белый фон */
+            background: rgba(255, 255, 255, 0.95);
             z-index: 9999;
             backdrop-filter: blur(10px);
         }
