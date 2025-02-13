@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокнот</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Блокнот</h1>
+    <textarea id="note" placeholder="Введите ваш текст здесь..."></textarea><br>
+    <button onclick="saveNote()">Сохранить</button>
+    <button onclick="loadNote()">Загрузить</button>
+
+    <script>
+        function saveNote() {
+            const noteContent = document.getElementById('note').value;
+            localStorage.setItem('note', noteContent);
+            alert('Заметка сохранена!');
+        }
+
+        function loadNote() {
+            const savedNote = localStorage.getItem('note');
+            if (savedNote) {
+                document.getElementById('note').value = savedNote;
+                alert('Заметка загружена!');
+            } else {
+                alert('Нет сохраненной заметки.');
+            }
+        }
+    </script>
+
+</body>
+</html>
