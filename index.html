@@ -113,7 +113,11 @@
                 // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
                 document.querySelector('.password-section').style.display = "none";
+                // Убираем размытие с контента
                 document.querySelector('body').classList.remove('blurred');
+                document.querySelectorAll('.step, .step-content').forEach(el => {
+                    el.classList.remove('blurred');
+                });
             } else {
                 // Повторный запрос пароля в случае ошибки
                 alert("Неверный пароль. Пожалуйста, попробуйте снова.");
