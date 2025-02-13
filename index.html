@@ -85,11 +85,19 @@
             margin-top: 15px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
         }
         .sub-step p {
             margin: 0;
             font-size: 14px;
             color: #666;
+            flex-grow: 1; /* Текст будет выше */
+        }
+        .sub-step .download-link {
+            margin-left: 20px;
+            order: 2; /* Кнопка справа */
         }
 
         /* Стиль для экрана до ввода пароля */
@@ -167,17 +175,19 @@
         <p>Для начала скачайте установочный файл Oracle VirtualBox, который позволит вам работать на виртуальном рабочем столе.</p>
         
         <div class="sub-step">
-            <h3>1.1. Запустите установочный файл</h3>
-            <p>Откройте загруженный файл и следуйте инструкциям мастера установки.</p>
-            <img src="install_step1.png" alt="Запуск установочного файла" />
-            <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
+            <p>1.1. Запустите установочный файл</p>
+            <div>
+                <p>Откройте загруженный файл и следуйте инструкциям мастера установки.</p>
+                <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
+            </div>
         </div>
         
         <div class="sub-step">
-            <h3>1.2. Завершение установки</h3>
-            <p>После завершения установки нажмите "Готово".</p>
-            <img src="install_step2.png" alt="Завершение установки" />
-            <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
+            <p>1.2. Завершение установки</p>
+            <div>
+                <p>После завершения установки нажмите "Готово".</p>
+                <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
+            </div>
         </div>
     </div>
 
