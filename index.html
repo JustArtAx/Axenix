@@ -61,8 +61,8 @@
             margin-top: 10px;
             width: 100%;
             max-width: 900px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: auto;
+            margin-right: auto;
             padding-top: 5px; /* Меньше верхний отступ */
         }
         .download-link {
@@ -131,7 +131,7 @@
     <script>
         function checkPassword() {
             let password = prompt("Введите пароль для доступа к сайту:");
-            if (password === "jyhrod-dodfa-5") {
+            if (password === " ") {
                 // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
                 document.querySelector('.password-section').style.display = "none";
