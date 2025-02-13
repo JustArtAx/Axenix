@@ -39,7 +39,7 @@
         }
         .step h2 {
             margin: 0;
-            font-size: 20px;
+            font-size: 22px; /* Увеличил шрифт шагов */
             color: #333;
         }
         .arrow {
@@ -129,7 +129,6 @@
             if (password === "jyhrod-dodfa-5") {
                 // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
-                document.querySelector('.password-section').style.display = "none";
                 // Убираем размытие с контента
                 document.querySelector('body').classList.remove('blurred');
                 document.querySelectorAll('.step, .step-content').forEach(el => {
