@@ -39,7 +39,7 @@
         }
         .step h2 {
             margin: 0;
-            font-size: 27px; /* Увеличил шрифт шагов */
+            font-size: 26px; /* Увеличил шрифт шагов */
             color: #333;
         }
         .arrow {
@@ -125,7 +125,7 @@
     </style>
     <script>
         function checkPassword() {
-            let password = prompt("Введите пароль для доступа к инструкции:");
+            let password = prompt("Введите пароль для доступа к сайту:");
             if (password === "jyhrod-dodfa-5") {
                 // Убираем блокировку, показываем контент
                 document.body.style.display = "block";
@@ -170,7 +170,7 @@
             <h3>1.1. Запустите установочный файл</h3>
             <p>Откройте загруженный файл и следуйте инструкциям мастера установки.</p>
             <img src="install_step1.png" alt="Запуск установочного файла" />
-            <!-- Убрана кнопка "Скачать Oracle VirtualBox" -->
+            <a class="download-link" href="https://drive.google.com/file/d/1CHynipva9mbN7ZvX9cxFy7mPeK3Ek8pt/view?usp=sharing" target="_blank">Скачать установочный файл</a>
         </div>
         
         <div class="sub-step">
